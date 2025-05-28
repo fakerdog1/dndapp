@@ -22,6 +22,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string $slug
  * @property string|null $description
  * @property bool|null $can_prepare_spells
+ * @property int $hit_die_id The ID of the hit die associated with this class.
+ * @property int|null $source_book_id The ID of the source book this class is from.
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
@@ -38,6 +40,8 @@ class CharacterClass extends Model
         'slug',
         'description',
         'can_prepare_spells',
+        'hit_die_id',
+        'source_book_id',
     ];
 
     public function subclasses(): HasMany

@@ -20,6 +20,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string $slug
  * @property string|null $description
  * @property int|null $level_available The level at which this subclass becomes available.
+ * @property int $class_id The ID of the character class this subclass belongs to.
+ * @property int|null $source_book_id The ID of the source book this subclass is from.
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
@@ -35,6 +37,8 @@ class Subclass extends Model
         'slug',
         'description',
         'level_available',
+        'class_id',
+        'source_book_id',
     ];
 
     public function character_class(): BelongsTo

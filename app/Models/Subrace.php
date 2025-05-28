@@ -18,6 +18,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string $name The name of the subrace.
  * @property string $slug A URL-friendly version of the name.
  * @property string|null $description A brief description of the subrace.
+ * @property int $race_id The ID of the
+ * @property int|null $source_book_id The ID of the source book this subrace is from.
  * @property Carbon $created_at
  * @property Carbon $updated_at
  *
@@ -32,6 +34,8 @@ class Subrace extends Model
         'name',
         'slug',
         'description',
+        'race_id',
+        'source_book_id',
     ];
 
     public function race(): BelongsTo
