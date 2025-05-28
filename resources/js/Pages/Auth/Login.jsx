@@ -15,7 +15,7 @@ export default function Login({status, canResetPassword}) {
     errors,
     reset
   } = useForm({
-    email: "",
+    username: "",
     password: "",
     remember: false,
   });
