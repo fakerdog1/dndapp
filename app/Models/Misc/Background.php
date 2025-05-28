@@ -2,6 +2,7 @@
 
 namespace App\Models\Misc;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -10,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * Represents a character background in the application.
  *
+ * @mixin Builder
  * @property int $id
  * @property string $name
  * @property string $slug

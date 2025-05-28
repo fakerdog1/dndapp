@@ -2,6 +2,7 @@
 
 namespace App\Models\Misc;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * Represents a character ability in the application.
  *
+ * @mixin Builder
  * @property int $id
  * @property string $name
  * @property string $slug
