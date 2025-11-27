@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AbilitiesSeeder extends Seeder
 {
@@ -21,6 +22,6 @@ class AbilitiesSeeder extends Seeder
             ['name' => 'Charisma', 'abbreviation' => 'Cha'],
         ];
 
-        DB::table('create_abilities_table')->insert($abilities);
+        DB::table('abilities')->insert($abilities);
     }
 }
