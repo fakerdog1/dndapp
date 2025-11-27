@@ -14,12 +14,12 @@ class AbilitiesSeeder extends Seeder
     public function run(): void
     {
         $abilities = [
-            ['name' => 'Strength', 'abbreviation' => 'Str'],
-            ['name' => 'Dexterity', 'abbreviation' => 'Dex'],
-            ['name' => 'Constitution', 'abbreviation' => 'Con'],
-            ['name' => 'Intelligence', 'abbreviation' => 'Int'],
-            ['name' => 'Wisdom', 'abbreviation' => 'Wis'],
-            ['name' => 'Charisma', 'abbreviation' => 'Cha'],
+            ['name' => 'Strength',     'abbreviation' => 'Str', 'slug' => 'strength'],
+            ['name' => 'Dexterity',    'abbreviation' => 'Dex', 'slug' => 'dexterity'],
+            ['name' => 'Constitution', 'abbreviation' => 'Con', 'slug' => 'constitution'],
+            ['name' => 'Intelligence', 'abbreviation' => 'Int', 'slug' => 'intelligence'],
+            ['name' => 'Wisdom',       'abbreviation' => 'Wis', 'slug' => 'wisdom'],
+            ['name' => 'Charisma',     'abbreviation' => 'Cha', 'slug' => 'charisma'],
         ];
 
         DB::table('abilities')->insert($abilities);
