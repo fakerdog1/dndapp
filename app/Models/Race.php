@@ -5,7 +5,7 @@ namespace App\Models;
 use App\Models\Misc\SizeCategory;
 use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Builder
 use Illuminate\Database\Eloquent\Model
 use Illuminate\Database\Eloquent\Relations\BelongsTo
 
