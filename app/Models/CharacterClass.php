@@ -57,7 +57,7 @@ lic function hit_die(): BelongsTo
         );
     }
 
-    public function source_book(): BelongsTo
+    public sssdffunction source_book(): BelongsTo
     {
         return $this->belongsTo(
             SourceBook::class
