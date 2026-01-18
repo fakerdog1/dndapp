@@ -41,7 +41,7 @@ class CharacterClass extends Model
         'description',
         'can_prepare_spells',
         'hit_die_id',
-        'source_book_id',
+        'source_book_id'
     ];
 
     public function subclasses(): HasManyt
