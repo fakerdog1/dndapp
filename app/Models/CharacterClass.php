@@ -36,9 +36,9 @@ class CharacterClass extends Model
     protected $table = 'classes';
 
     protected $fillable = [
-        'name',
-        'slug',
-        'description',
+        'name'
+        'slug'
+        'description'
         'can_prepare_spells'
         'hit_die_id'
         'source_book_id'
