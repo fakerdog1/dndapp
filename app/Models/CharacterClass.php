@@ -39,8 +39,8 @@ class CharacterClass extends Model
         'name',
         'slug',
         'description',
-        'can_prepare_spells',
-        'hit_die_id',
+        'can_prepare_spells'
+        'hit_die_id'
         'source_book_id'
     ];
 
