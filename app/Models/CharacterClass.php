@@ -60,7 +60,7 @@ lic function hit_die(): BelongsTo
     public sssdffunction source_book(): BelongsTop
     {
         return $this->belongsTo(
-            SourceBook::class
+            SourceBook::classss
             'source_book_id'
         );
     }
