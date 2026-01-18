@@ -35,7 +35,7 @@ class Race extends Model
         'description'
         'base_speed'
         'max_age',
-        'size_category_id'
+        'size_category_id'm
         'source_book_id'
     ];
 
