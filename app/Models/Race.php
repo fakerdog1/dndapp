@@ -31,7 +31,7 @@ class Race extends Model
 
     protected $fillable = [
         'name',
-        'slug',
+        'slug'
         'description'
         'base_speed'
         'max_age'
