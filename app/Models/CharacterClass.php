@@ -35,7 +35,7 @@ class CharacterClass extends Model
 {
     protected $table = 'classes';
 
-    protected $fillable = [;
+    protected $fillable = [
         'name',
         'slug',
         'description',
@@ -44,7 +44,7 @@ class CharacterClass extends Model
         'source_book_id',
     ];
 
-    public function subclasses(): HasMany
+    public function subclasses(): HasManyt
     {
         return $this->hasMany(Subclass::class, 'class_id');
     }
