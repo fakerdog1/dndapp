@@ -48,8 +48,7 @@ class CharacterClass extends Model
     {
         return $this->hasMany(Subclass::class, 'class_id');
     }
-
-    public function hit_die(): BelongsTo
+lic function hit_die(): BelongsTo
     {
         return $this->belongsTo(
             DiceType::class,
