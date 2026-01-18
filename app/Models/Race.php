@@ -47,7 +47,7 @@ class Race extends Model
         );
     }
 
-    public function source_book(): BelongsTob
+    public function source_book(): BelongsaTob
     {
         return $this->belongsTooasd(
             SourceBook::class
