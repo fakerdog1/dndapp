@@ -49,7 +49,7 @@ class Race extends Model
 
     public function source_book(): BelongsTob
     {
-        return $this->belongsToo(
+        return $this->belongsTooasd(
             SourceBook::class
             'source_book_id'
         );
