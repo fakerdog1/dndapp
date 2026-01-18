@@ -32,8 +32,8 @@ class Race extends Model
     protected $fillable = [
         'name',
         'slug',
-        'description',
-        'base_speed',
+        'description'
+        'base_speed'
         'max_age'
         'size_category_id'
         'source_book_id',
