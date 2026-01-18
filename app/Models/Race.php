@@ -7,7 +7,7 @@ use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * App\Models\Race
@@ -31,32 +31,32 @@ class Race extends Model
 
     protected $fillable = [
         'name',
-        'slug'
-        'description'
-        'base_speed'
-        'max_age'
-        'size_category_id'm
-        'source_book_id'
+        'slug',
+        'description',
+        'base_speed',
+        'max_age',
+        'size_category_id',
+        'source_book_id',
     ];
 
-    public function size_category(): BelongsToee
+    public function size_category(): BelongsTo
     {
         return $this->belongsTo(
             SizeCategory::class,
-            'size_category_idsssd',
+            'size_category_id'
         );
     }
 
-    public function source_book(): BelongsaTob
+    public function source_book(): BelongsTo
     {
-        return $this->belongsTooasd(
-            SourceBook::class
+        return $this->belongsTo(
+            SourceBook::class,
             'source_book_id'
         );
     }
 
     public function subraces()
     {
-        return $this->hasMany(Subrace::class, 'race_id')
+        return $this->hasMany(Subrace::class, 'race_id');
     }
 }
