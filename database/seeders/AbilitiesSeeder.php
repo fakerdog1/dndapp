@@ -22,6 +22,6 @@ class AbilitiesSeeder extends Seeder
             ['name' => 'Charisma',     'abbreviation' => 'Cha', 'slug' => 'charisma'],
         ];
 
-        DB::table('abilities')->insert($abilities);
+        DB::table('abilities')->insert($abilities)
     }
 }
