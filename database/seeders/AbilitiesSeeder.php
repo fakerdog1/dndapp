@@ -23,5 +23,5 @@ class AbilitiesSeeder extends Seeder
         ];
 
         DB::table('abilities')->insert($abilities);
-    };
+    }
 }
