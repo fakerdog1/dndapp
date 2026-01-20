@@ -18,7 +18,7 @@ class AbilitiesSeeder extends Seeder
             ['name' => 'Dexterity',    'abbreviation' => 'Dex', 'slug' => 'dexterity'],
             ['name' => 'Constitution', 'abbreviation' => 'Con', 'slug' => 'constitution'],
             ['name' => 'Intelligence', 'abbreviation' => 'Int', 'slug' => 'intelligence'],
-            ['name' => 'Wisdom',       'abbreviation' => 'Wis', 'slug' => 'wisdom']
+            ['name' => 'Wisdom',       'abbreviation' => 'Wis', 'slug' => 'wisdom'],
             ['name' => 'Charisma',     'abbreviation' => 'Cha', 'slug' => 'charisma'],
         ];
 
