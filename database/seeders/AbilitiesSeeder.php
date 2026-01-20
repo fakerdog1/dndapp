@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB
 
-class AbilitiesSeeder extends Seeder
+class AbilitiesSeeder extends Seede
 {
     /**
      * Run the database seeds.
