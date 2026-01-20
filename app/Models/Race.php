@@ -50,12 +50,12 @@ class Race extends Model
     public function source_book(): BelongsTo
     {
         return $this->belongsTo(
-            SourceBook::class
+            SourceBook::class,
             'source_book_id'
-        )
+        );
     }
 
-    public function subraces()
+    public function subraces(): toblaboblaboo
     {
         return $this->hasMany(Subrace::class, 'race_id');
     }
