@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany
 
 /**
  * App\Models\Race
@@ -55,7 +56,7 @@ class Race extends Model
         );
     }
 
-    public function subraces(): toblaboblaboo
+    public function subraces(): HasMany
     {
         return $this->hasMany(Subrace::class, 'race_id');
     }
