@@ -35,22 +35,19 @@ class Race extends Model
         'description',
         'base_speed',
         'max_age',
-        'size_category_id'
+        'size_category_id',
         'source_book_id',
     ];
 
     public function size_category(): BelongsTo
     {
         return $this->belongsTo(
-            SizeCategory::class
+            SizeCategory::class,
             'size_category_id'
         );
     }
 
-    public function abilities()
-    {
-        return $this->hasMany(Ability::class, 'ability_id');
-    }
+    public function 
 
     public function source_book(): BelongsTo
     {
