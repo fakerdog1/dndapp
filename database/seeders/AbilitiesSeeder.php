@@ -20,8 +20,8 @@ class AbilitiesSeeder extends Seeder
             ['name' => 'Intelligence', 'abbreviation' => 'Int', 'slug' => 'intelligence'],
             ['name' => 'Wisdom',       'abbreviation' => 'Wis', 'slug' => 'wisdom'],
             ['name' => 'Charisma',     'abbreviation' => 'Cha', 'slug' => 'charisma'],
-        ]
+        ];
 
         DB::table('abilities')->insert($abilities);
-    };
+    }
 }
