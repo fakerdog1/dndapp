@@ -43,7 +43,7 @@ class Race extends Model
     public function size_category(): BelongsTo
     {
         return $this->belongsTo(
-            SizeCategory::class
+            SizeCategory::class,
             'size_category_id'
         );
     }
