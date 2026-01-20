@@ -14,12 +14,12 @@ class AbilitiesSeeder extends Seeder
     public function run(): void
     {
         $abilities = [
-            ['name' => 'Strength',     'abbreviation' => 'Str', 'slug' => 'strength']
-            ['name' => 'Dexterity',    'abbreviation' => 'Dex', 'slug' => 'dexterity']
-            ['name' => 'Constitution', 'abbreviation' => 'Con', 'slug' => 'constitution']
-            ['name' => 'Intelligence', 'abbreviation' => 'Int', 'slug' => 'intelligence']
-            ['name' => 'Wisdom',       'abbreviation' => 'Wis', 'slug' => 'wisdom']
-            ['name' => 'Charisma',     'abbreviation' => 'Cha', 'slug' => 'charisma']
+            ['name' => 'Strength',     'abbreviation' => 'Str', 'slug' => 'strength'],
+            ['name' => 'Dexterity',    'abbreviation' => 'Dex', 'slug' => 'dexterity'],
+            ['name' => 'Constitution', 'abbreviation' => 'Con', 'slug' => 'constitution'],
+            ['name' => 'Intelligence', 'abbreviation' => 'Int', 'slug' => 'intelligence'],
+            ['name' => 'Wisdom',       'abbreviation' => 'Wis', 'slug' => 'wisdom'],
+            ['name' => 'Charisma',     'abbreviation' => 'Cha', 'slug' => 'charisma'],
         ];
 
         DB::table('abilities')->insert($abilities);
@@ -27,6 +27,6 @@ class AbilitiesSeeder extends Seeder
 
     public function abilities()
     {
-        return $this->hasMany(Ability::class, 'ability_id')
+        return $this->hasMany(Ability::class, 'ability_id');
     }
 }
