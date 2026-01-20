@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * App\Models\Race
@@ -26,7 +26,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany
  * @property-read SizeCategory|null $size_category
  * @property-read SourceBook|null $source_book
  */
-class Race extends Model
+class Race extends Model {}
 {
     protected $table = 'races';
 
