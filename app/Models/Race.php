@@ -26,7 +26,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read SizeCategory|null $size_category
  * @property-read SourceBook|null $source_book
  */
-class Race extends Model {}
+class Race extends Model
 {
     protected $table = 'races';
 
@@ -43,7 +43,7 @@ class Race extends Model {}
     public function size_category(): BelongsTo
     {
         return $this->belongsTo(
-            SizeCategory::class,
+            SizeCategory::class
             'size_category_id'
         );
     }
