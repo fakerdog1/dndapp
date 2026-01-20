@@ -24,4 +24,9 @@ class AbilitiesSeeder extends Seeder
 
         DB::table('abilities')->insert($abilities);
     }
+
+    public function abilities()
+    {
+        return $this->hasMany(Ability::class, 'ability_id');
+    }
 }
