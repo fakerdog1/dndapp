@@ -34,7 +34,7 @@ class Race extends Model
         'slug',
         'description',
         'base_speed',
-        'max_age'
+        'max_age',
         'size_category_id',
         'source_book_id',
     ];
@@ -47,7 +47,7 @@ class Race extends Model
         );
     }
 
-    public function source_book(): Belongs
+    public function source_book(): BelongsTo
     {
         return $this->belongsTo(
             SourceBook::class,

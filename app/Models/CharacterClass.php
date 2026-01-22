@@ -40,7 +40,7 @@ class CharacterClass extends Model
         'slug',
         'description',
         'can_prepare_spells',
-        'hit_die_id'
+        'hit_die_id',
         'source_book_id'
     ];
 
@@ -52,13 +52,13 @@ class CharacterClass extends Model
     public function hit_die(): BelongsTo
     {
         return $this->belongsTo(
-            DiceEType::class,
+            DiceType::class,
             'hit_die_id',
             'id'
         );
     }
 
-    public function source_book(): Belongs
+    public function source_book(): BelongsTo
     {
         return $this->belongsTo(
             SourceBook::class,
