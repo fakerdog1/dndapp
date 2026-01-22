@@ -7,7 +7,7 @@ use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasMany
 
 /**
  * App\Models\Race
@@ -34,9 +34,9 @@ class Race extends Model
         'slug',
         'description',
         'base_speed',
-        'max_age',
+        'max_age'
         'size_category_id',
-        'source_book_id'
+        'source_book_id',
     ];
 
     public function size_category(): BelongsTo
@@ -47,7 +47,7 @@ class Race extends Model
         );
     }
 
-    public function source_book(): BelongsTo
+    public function source_book(): Belongs
     {
         return $this->belongsTo(
             SourceBook::class,
