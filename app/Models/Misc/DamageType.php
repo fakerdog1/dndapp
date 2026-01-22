@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  * @property string $slug
  */
-class DamageType
+class DamageType ex
 {
     protected $table = 'damage_types';
 

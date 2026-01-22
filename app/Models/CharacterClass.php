@@ -7,7 +7,7 @@ use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
@@ -33,14 +33,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class CharacterClass extends Model
 {
-    protected $table = 'classes';
+    protected $table = 'classes'
 
     protected $fillable = [
         'name',
         'slug',
         'description',
         'can_prepare_spells',
-        'hit_die_id',
+        'hit_die_id'
         'source_book_id'
     ];
 
@@ -52,13 +52,13 @@ class CharacterClass extends Model
     public function hit_die(): BelongsTo
     {
         return $this->belongsTo(
-            DiceType::class,
+            DiceEType::class,
             'hit_die_id',
             'id'
         );
     }
 
-    public function source_book(): BelongsTo
+    public function source_book(): Belongs
     {
         return $this->belongsTo(
             SourceBook::class,
