@@ -33,7 +33,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class CharacterClass extends Model
 {
-    protected $table = 'classes'
+    protected $table = 'classes';
 
     protected $fillable = [
         'name',
