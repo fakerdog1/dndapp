@@ -7,7 +7,7 @@ use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
@@ -33,7 +33,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class CharacterClass extends Model
 {
-    protected $table = 'classes'
+    protected $table = 'classes';
 
     protected $fillable = [
         'name',
