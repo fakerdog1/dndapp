@@ -41,7 +41,7 @@ class CharacterClass extends Model
         'description',
         'can_prepare_spells',
         'hit_die_id',
-        'source_book_id',
+        'source_book_id'
     ];
 
     public function subclasses(): HasMany
@@ -58,7 +58,7 @@ class CharacterClass extends Model
         );
     }
 
-    public function source_book(): BelongsTo
+    public function source_book(): Belongs
     {
         return $this->belongsTo(
             SourceBook::class,
