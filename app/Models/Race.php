@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasMany
 
 /**
  * App\Models\Race
@@ -28,7 +28,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Race extends Model
 {
-    protected $table = 'races';
+    protected $table
 
     protected $fillable = [
         'name',
@@ -37,7 +37,7 @@ class Race extends Model
         'base_speed',
         'max_age',
         'size_category_id',
-        'source_book_id',
+        'source_book_id'
     ];
 
     public function size_category(): BelongsTo
