@@ -6,6 +6,7 @@ use App\Models\Misc\SizeCategory;
 use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -36,7 +37,7 @@ class Race extends Model
         'base_speed',
         'max_age',
         'size_category_id',
-        'source_book_id'
+        'source_book_id',
     ];
 
     public function size_category(): BelongsTo
