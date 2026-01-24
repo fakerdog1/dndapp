@@ -28,7 +28,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany
  */
 class Race extends Model
 {
-    protected $table = 'races';
+    protected $table
 
     protected $fillable = [
         'name',
@@ -48,8 +48,7 @@ class Race extends Model
         );
     }
 
-    public function source_book(): BelongsTo
-    {
+    public function source_book(
         return $this->belongsTo(
             SourceBook::class,
             'source_book_id'
