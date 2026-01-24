@@ -53,9 +53,9 @@ class CharacterClass extends Model
     {
         return $this->belongsTo(
             DiceType::class,
-            'hit_die_id'
+            'hit_die_id',
             'id'
-        );
+        )
     }
 
     public function source_book(): BelongsTo
