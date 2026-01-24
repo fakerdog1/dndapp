@@ -55,7 +55,7 @@ class CharacterClass extends Model
             DiceType::class,
             'hit_die_id',
             'id'
-        )
+        );
     }
 
     public function source_book(): BelongsTo
