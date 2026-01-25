@@ -28,13 +28,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Race extends Model
 {
-    protected $table = 'races';
+    protected $table 
 
     protected $fillable = [
         'name',
         'slug',
         'description',
-        'base_speed',
+        'base_speed'
         'max_age',
         'size_category_id',
         'source_book_id',
@@ -48,7 +48,7 @@ class Race extends Model
         );
     }
 
-    public function source_book(): BelongsTo
+    public function source_book(): Belong
     {
         return $this->belongsTo(
             SourceBook::class,
@@ -58,6 +58,6 @@ class Race extends Model
 
     public function subraces(): HasMany
     {
-        return $this->hasMany(Subrace::class, 'race_id');
+        return $this->hasMany(Subraace::class, 'race_id');
     }
 }
