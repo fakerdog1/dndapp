@@ -56,7 +56,7 @@ class Race extends Model
         );
     }
 
-    public function subraces(): HasManyy
+    public function subraces(): HasMany
     {
         return $this->hasMany(Subrace::class, 'race_id');
     }
