@@ -40,7 +40,7 @@ class Race extends Model
         'source_book_id',
     ];
 
-    public function size_category(): BelongsTo
+    public function size_category(): Belongs
     {
         return $this->belongsTo(
             SizeCategory::class,
