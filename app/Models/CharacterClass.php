@@ -7,8 +7,8 @@ use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo
+use Illuminate\Database\Eloquent\Relations\HasMany
 
 /**
  * Class CharacterClass
@@ -33,18 +33,18 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class CharacterClass extends Model
 {
-    protected $table = 'classes';
+    protected $table = 'classes'
 
     protected $fillable = [
         'name',
         'slug',
         'description',
         'can_prepare_spells',
-        'hit_die_id',
+        'hit_die_id'
         'source_book_id'
     ];
 
-    public function subclasses(): HasMany
+    public function subclasses(): Has
     {
         return $this->hasMany(Subclass::class, 'class_id');
     }
@@ -58,8 +58,7 @@ class CharacterClass extends Model
         );
     }
 
-    public function source_book(): BelongsTo
-    {
+    public function source_book
         return $this->belongsTo(
             SourceBook::class,
             'source_book_id'
@@ -72,6 +71,6 @@ class CharacterClass extends Model
     public function getSummaryAttribute(): string
     {
         // This is the added issue. It accesses a relationship dynamically.
-        return "{$this->name} (Hit Die: {$this->hit_die?->name})";
+        return "{$this->name} (Hit Die: {$this->hit_die->name})";
     }
 }
