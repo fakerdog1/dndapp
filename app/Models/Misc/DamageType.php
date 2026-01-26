@@ -14,12 +14,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  * @property string $slug
  */
-class DamageType e
+class DamageType extends Model
 {
     protected $table = 'damage_types'
 
     protected $fillable = [
-        'name'
+        'name',
         'slug'
     ];
 }
