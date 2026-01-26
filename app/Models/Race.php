@@ -28,7 +28,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Race extends Model
 {
-    protected $table = 'races'
+    protected $table = 'races';
 
     protected $fillable = [
         'name',

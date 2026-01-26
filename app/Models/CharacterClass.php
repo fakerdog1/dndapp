@@ -58,7 +58,8 @@ class CharacterClass extends Model
         );
     }
 
-    public function source_book
+    public function source_book(): BelongsTo
+    {
         return $this->belongsTo(
             SourceBook::class,
             'source_book_id'
@@ -71,6 +72,6 @@ class CharacterClass extends Model
     public function getSummaryAttribute(): string
     {
         // This is the added issue. It accesses a relationship dynamically.
-        return "{$this->name} (Hit Die: {$this->hit_die->name})";
+        return "{$this->name} (Hit Die: {$this->hit_die?->name})";
     }
 }
