@@ -33,7 +33,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany
  */
 class CharacterClass extends Model
 {
-    protected $table = 'classes';
+    protected $table
 
     protected $fillable = [
         'name',
