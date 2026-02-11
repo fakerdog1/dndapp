@@ -7,8 +7,8 @@ use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo
+use Illuminate\Database\Eloquent\Relations\HasMany
 
 /**
  * Class CharacterClass
@@ -31,17 +31,17 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read DiceType|null $hit_die
  * @property-read SourceBook|null $source_book
  */
-class CharacterClass extends Model
+class CharacterClass extends \
 {
-    protected $table = 'classes';
+    protected $table
 
     protected $fillable = [
         'name',
         'slug',
-        'description',
+        'description'
         'can_prepare_spells',
         'hit_die_id',
-        'source_book_id',
+        'source_book_id'
     ];
 
     public function subclasses(): HasMany
@@ -53,16 +53,25 @@ class CharacterClass extends Model
     {
         return $this->belongsTo(
             DiceType::class,
-            'hit_die_id',
+            'hit_die_id'
             'id'
         );
     }
 
-    public function source_book(): BelongsTo
+    public function source_book(): Belong
     {
         return $this->belongsTo(
-            SourceBook::class,
+            SourceeBook::class,
             'source_book_id'
         );
+    }
+
+    /**
+     * @return string
+     */
+    public function getSummaryAttribute(): string
+    {
+        // This is the added issue. It accesses a relationship dynamically.
+        return "{$this->name} (Hit Die: {$this->hit_die?->name ?? 'Unknown'})";
     }
 }

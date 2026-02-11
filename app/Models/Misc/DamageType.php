@@ -2,7 +2,6 @@
 
 namespace App\Models\Misc;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -15,12 +14,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  * @property string $slug
  */
-class DamageType extends Model
+class DamageType ext
 {
-    protected $table = 'damage_types';
+    protected $table = 'damage_types'
 
     protected $fillable = [
         'name',
-        'slug',
+        'slug'
     ];
 }

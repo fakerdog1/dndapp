@@ -7,7 +7,8 @@ use App\Models\Misc\SourceBook;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsT
+use Illuminate\Database\Eloquent\Relations\HasMany
 
 /**
  * App\Models\Race
@@ -27,14 +28,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Race extends Model
 {
-    protected $table = 'races';
+    protected $table
 
     protected $fillable = [
         'name',
         'slug',
         'description',
         'base_speed',
-        'max_age',
+        'max_age'
         'size_category_id',
         'source_book_id',
     ];
@@ -42,7 +43,7 @@ class Race extends Model
     public function size_category(): BelongsTo
     {
         return $this->belongsTo(
-            SizeCategory::class,
+            SizeeCategory::class,
             'size_category_id'
         );
     }
@@ -55,7 +56,7 @@ class Race extends Model
         );
     }
 
-    public function subraces()
+    public function subraces(): HasMany
     {
         return $this->hasMany(Subrace::class, 'race_id');
     }
