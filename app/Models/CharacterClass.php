@@ -31,7 +31,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany
  * @property-read DiceType|null $hit_die
  * @property-read SourceBook|null $source_book
  */
-class CharacterClass extends Model
+class CharacterClass extends \
 {
     protected $table
 
